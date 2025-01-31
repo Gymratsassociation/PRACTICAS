@@ -1,5 +1,4 @@
-
-const db = require('./db'); 
+const db = require('../configuration/database'); 
 
 // Obtener todos los usuarios
 const findAllActivities = () => {

@@ -1,4 +1,4 @@
-const {findAllUsers, findUser,registerUser, deleteUserByUsername } = require('../service/user.js');
+const {findAllUsers, findUser,registerUser, updateUserUsername, deleteUserById } = require('../service/user.js');
 
 
 // GET todos los usuarios
@@ -56,10 +56,10 @@ const postUser = async (req, res) => {
 //PUT
 const putUser = async (req, res) => {
     try {
-      const { username } = req.params; 
-      const { nuevoNombreUsuario } = req.body; 
+      const { id, nombre, email, contraseña, telefono } = req.body; 
+      //const { nuevoNombreUsuario } = req.body; 
       
-      const data = await updateUserUsername(username, nuevoNombreUsuario);
+      const data = await updateUserUsername(id, nombre);
       
       if (!data) {
         return res.status(404).json({ message: 'Usuario no encontrado.' });

@@ -1,5 +1,4 @@
-const { deleteUserById } = require('../controller/User');
-const db = require('./db'); // La conexión a la base de datos SQLite
+const db = require('../configuration/database'); 
 
 // Obtener todos los usuarios
 const findAllUsers = () => {
@@ -14,7 +13,6 @@ const findAllUsers = () => {
   });
 };
 
-// Buscar un usuario por nombre de usuario y contraseña
 // Buscar un usuario por nombre de usuario y contraseña
 const findUser = (username, password) => {
   return new Promise((resolve, reject) => {
@@ -44,12 +42,11 @@ const registerUser = (nombre, email, contraseña, telefono) => {
       });
     });
   };
-
 // Actualizar el nombre de usuario
-const updateUserUsername = (username, nuevoNombreUsuario) => {
+const updateUserUsername = (id, nuevoNombreUsuario) => {
   return new Promise((resolve, reject) => {
-    const stmt = db.prepare('UPDATE Usuarios SET nombre = ? WHERE nombre = ?');
-    stmt.run(nuevoNombreUsuario, username, function(err) {
+    const stmt = db.prepare('UPDATE Usuarios SET nombre = ? WHERE id = ?');
+    stmt.run(nuevoNombreUsuario, id, function(err) {
       if (err) {
         reject(err);
       } else {
@@ -62,7 +59,6 @@ const updateUserUsername = (username, nuevoNombreUsuario) => {
     });
   });
 };
-
 // Eliminar un usuario por ID
 const deleteUserById = (id) => {
     return new Promise((resolve, reject) => {

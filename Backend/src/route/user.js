@@ -13,7 +13,7 @@ router.get('/user/:username/:password', getUser);
 router.post('/user', postUser);
 
 // Ruta put un usuario existente
-router.put('/user/:username', putUser); // Actualiza un usuario específico por 'username'
+router.put('/user', putUser); // Actualiza un usuario específico por 'username'
 
 // Ruta delete un usuario específico por 'id'
 router.delete('/user/:id', deleteUser);

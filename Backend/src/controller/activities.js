@@ -1,4 +1,4 @@
-const {findAllActivities} = require('../service/activity.js');
+const {findAllActivities} = require('../service/activities.js');
 
 // GET todos los usuarios
 const getActivities = async (req, res) => {

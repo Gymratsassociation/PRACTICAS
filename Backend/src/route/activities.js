@@ -3,4 +3,6 @@ const router = express.Router();
 
 const { getActivities } = require('../controller/activities');
 
-router.get('../activities', getActivities); // Devuelve todos los usuarios
+router.get('/activities', getActivities);
+
+module.exports = router;

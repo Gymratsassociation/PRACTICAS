@@ -15,9 +15,10 @@ const findAllUsers = () => {
 };
 
 // Buscar un usuario por nombre de usuario y contraseña
+// Buscar un usuario por nombre de usuario y contraseña
 const findUser = (username, password) => {
   return new Promise((resolve, reject) => {
-    db.get('SELECT * FROM Usuarios WHERE name = ? AND contraseña = ?', [username, password], (err, row) => {
+    db.get('SELECT * FROM Usuarios WHERE nombre = ? AND contraseña = ?', [username, password], (err, row) => {
       if (err) {
         reject(err);
       } else {
@@ -27,19 +28,22 @@ const findUser = (username, password) => {
   });
 };
 
+module.exports = {
+  findUser
+};
 // Registrar un nuevo usuario
 const registerUser = (nombre, email, contraseña, telefono) => {
-  return new Promise((resolve, reject) => {
-    const stmt = db.prepare('INSERT INTO Usuarios (nombre, email, contraseña, telefono) VALUES (?, ?, ?,?)');
-    stmt.run(nombre, email, contraseña, telefono, function(err) {
-      if (err) {
-        reject(err);
-      } else {
-        resolve({ id: this.lastID, username: nombre, email, phone: telefono });
-      }
+    return new Promise((resolve, reject) => {
+      const stmt = db.prepare('INSERT INTO Usuarios (nombre, email, contraseña, telefono) VALUES (?, ?, ?, ?)');
+      stmt.run(nombre, email, contraseña, telefono, function(err) {
+        if (err) {
+          reject(err);
+        } else {
+          resolve({ id: this.lastID, username: nombre, email, phone: telefono });
+        }
+      });
     });
-  });
-};
+  };
 
 // Actualizar el nombre de usuario
 const updateUserUsername = (username, nuevoNombreUsuario) => {

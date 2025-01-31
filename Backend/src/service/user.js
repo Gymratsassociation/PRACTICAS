@@ -1,4 +1,4 @@
-const { deleteUser } = require('../controller/User');
+const { deleteUserById } = require('../controller/User');
 const db = require('./db'); // La conexión a la base de datos SQLite
 
 // Obtener todos los usuarios

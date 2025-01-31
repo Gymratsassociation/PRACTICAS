@@ -42,7 +42,6 @@ const postUser = async (req, res) => {
       // Responde con el resultado
       res.status(200).json(data);
     } catch (error) {
-      // Si ocurre un error, responde con el error y un código 500
       console.error(error);
       res.status(500).json({ message: 'Error al crear el usuario' });
     }

@@ -1,14 +1,12 @@
 {
-  "name": "aadam",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "practicas",
+  "version": "0.1",
   "scripts": {
+    "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^4.21.2"
   }

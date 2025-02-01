@@ -1,6 +1,5 @@
 {
   "name": "practicas",
-  "version": "0.1",
   "scripts": {
     "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +10,9 @@
     "express": "^4.21.2",
     "sqlite3": "^5.1.7",
     "knex": "3.1.0"
-  }
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "description": ""
 }

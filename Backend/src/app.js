@@ -7,7 +7,7 @@ const reservations = require('./route/reservations.js')
 const app = express();
 app.use(express.json());
 
-app.use('/users', user); 
+app.use('/user', user); 
 app.use('/activities', activities); 
 app.use('/reservation',reservations)
 

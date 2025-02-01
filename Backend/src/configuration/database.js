@@ -3,7 +3,7 @@ const knex = require('knex');
 const db = knex({
     client: 'sqlite3',
     connection : {
-        filename: 'DB Gimnasio.db'
+        filename: 'db.db'
 
     },
     useNullAsDefault: true

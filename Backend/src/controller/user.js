@@ -53,6 +53,35 @@ const postUser = async (req, res) => {
   }
 };
 
+// POST Login 
+const loginUser = async (req, res) => {
+  try {
+      console.log('Datos recibidos en login:', req.body);
+
+      const { username, password } = req.body;
+
+      if (!username || !password) {
+          return res.status(400).json({ message: 'Usuario y contraseña son requeridos.' });
+      }
+
+      const user = await findUser(username, password);
+
+      if (!user) {
+          return res.status(401).json({ message: 'Usuario o contraseña incorrectos.' });
+      }
+
+      res.status(200).json({
+          id: user.id_usuario,
+          username: user.nombre,
+          email: user.email,
+          phone: user.telefono,
+      });
+  } catch (error) {
+      console.error('Error en login:', error);
+      res.status(500).json({ message: 'Error interno del servidor.' });
+  }
+};
+
 //PUT
 const putUser = async (req, res) => {
     try {
@@ -90,6 +119,7 @@ const deleteUser = async (req, res) => {
   };
 
 module.exports = {
+    loginUser,  
     getUser,
     getUsers,
     postUser,

@@ -11,6 +11,7 @@ app.use('/user', user);
 app.use('/activities', activities); 
 app.use('/reservation',reservations)
 
-app.listen(8080, () => {
-    console.log('Se ha iniciado el backend en el puerto 8080');
-});
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+})

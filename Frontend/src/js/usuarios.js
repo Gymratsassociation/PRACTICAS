@@ -1,7 +1,3 @@
-
-const params = new URLSearchParams(window.location.search);
-const username = params.get('username');
-
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header h1');
     if (username) {

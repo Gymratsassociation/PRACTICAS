@@ -1,4 +1,4 @@
-const {findReservationsByUserId,registerReservation} = require('../service/reservation.js');
+const {findReservationsByUserId,registerReservation} = require('../service/reservations.js');
 
 //GET
 const getReservationsByUserId = async (req, res) => {

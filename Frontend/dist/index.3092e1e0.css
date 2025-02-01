@@ -298,11 +298,109 @@ label {
 }
 
 .login-container {
-  box-sizing: border-box;
-  background-color: #f3f3f3;
+  background: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px 40px;
+  animation: .6s ease-in-out slideIn;
+  box-shadow: 0 4px 8px #0003;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container h1 {
+  text-align: center;
+  color: #444;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: #555;
+  margin-bottom: 8px;
+  font-size: 14px;
+  display: block;
+}
+
+.form-group input {
+  background: #f9f9f9;
   border: 1px solid #ddd;
-  margin: 0;
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  transition: border .3s, box-shadow .3s;
+}
+
+.form-group input:focus {
+  border-color: #ffa41b;
+  outline: none;
+  box-shadow: 0 0 6px #ffa41b66;
+}
+
+.login-container {
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 50px auto;
   padding: 20px;
+  box-shadow: 0 4px 8px #0000001a;
+}
+
+.login-container h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.login-container input {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 90%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+#login-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+  padding: 10px;
+  font-size: 1rem;
+  transition: background-color .3s;
+}
+
+#login-button:hover {
+  background-color: #0056b3;
+}
+
+#login-message {
+  color: red;
+  margin-top: 10px;
+  font-size: .9rem;
 }
 
 .formulario {
@@ -406,7 +504,7 @@ label {
   border: 1px;
   border-radius: 10px;
   width: 100%;
-  max-width: 100px;
+  max-width: 200px;
 }
 
 footer {

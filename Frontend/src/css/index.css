@@ -328,13 +328,122 @@ header {
     }
 
 
+
+
+/* Contenedor del formulario */
 .login-container {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 20px 20px;
-    background-color: #f3f3f3;
-    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.6s ease-in-out;
 }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título del formulario */
+.login-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Campos de entrada */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #ffa41b;
+    box-shadow: 0 0 6px rgba(255, 164, 27, 0.4);
+    outline: none;
+}
+
+/* Botón de inicio de sesión */
+/* Contenedor del formulario */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto; /* Centra el formulario */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título del formulario */
+.login-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Campos de entrada */
+.login-container input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Botón de inicio de sesión */
+#login-button {
+    width: 90%;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Mensaje de error */
+#login-message {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: red;
+}
+
 
 .formulario {
     display: flex;
@@ -437,11 +546,11 @@ header {
 
 .entrenadores img{
     
-    width: 100%; /* Ocupa el espacio disponible */
-    max-width: 100PX; /* Tamaño máximo */
-    aspect-ratio: 1 / 1; /* Mantén relación cuadrada */
-    object-fit: cover; /* Ajusta la imagen sin distorsión */
-    border-radius: 10px; /* Bordes redondeados */
+    width: 100%; 
+    max-width: 200PX; 
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    border-radius: 10px; 
     border: 1px 
 }
 

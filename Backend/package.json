@@ -1,15 +1,15 @@
 {
-  "name": "aadam",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "practicas",
+  "version": "0.1",
   "scripts": {
+    "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7",
+    "knex": "3.1.0"
   }
 }

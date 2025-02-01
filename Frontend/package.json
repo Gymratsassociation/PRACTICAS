@@ -1,12 +1,17 @@
 {
-  "name": "frontend",
+  "name": "practicas-frontend",
   "version": "1.0.0",
-  "main": "index.js",
+  "source": "src/index.html",
+  "type": "module",
   "scripts": {
+    "start": "parcel --no-cache",
+    "build": "parcel build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "axios": "1.7.9"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
 }

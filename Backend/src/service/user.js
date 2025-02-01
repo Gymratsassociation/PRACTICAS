@@ -16,7 +16,7 @@ const findAllUsers = () => {
 // Buscar un usuario por nombre de usuario y contraseña
 const findUser = (username, password) => {
   return new Promise((resolve, reject) => {
-    db.get('SELECT * FROM Usuarios WHERE nombre = ? AND contraseña = ?', [username, password], (err, row) => {
+    db.get('SELECT * FROM Usuarios WHERE Nombre = ? AND Contraseña = ?', [username, password], (err, row) => {
       if (err) {
         reject(err);
       } else {

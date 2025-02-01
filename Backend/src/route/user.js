@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { getUser, getUsers, postUser, putUser, deleteUser } = require('../controller/User.js');
+const { getUser, getUsers, postUser, putUser, deleteUser, loginUser } = require('../controller/User.js');
 
 // Ruta getall todos los usuarios
 router.get('/user', getUsers);
@@ -11,6 +11,9 @@ router.get('/user/:username/:password', getUser);
 
 // Ruta posy un nuevo usuario
 router.post('/user', postUser);
+
+// Ruta para el login
+router.post('/login', loginUser);
 
 // Ruta put un usuario existente
 router.put('/user', putUser); // Actualiza un usuario específico por 'username'

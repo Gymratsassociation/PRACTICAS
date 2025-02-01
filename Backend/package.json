@@ -1,18 +1,19 @@
 {
-  "name": "practicas",
+  "name": "practicas-Backend",
+  "version": "01",
+  "description": "Gym App",
+
   "scripts": {
     "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
+
   "dependencies": {
     "express": "^4.21.2",
     "sqlite3": "^5.1.7",
-    "knex": "3.1.0"
-  },
-  "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {},
-  "description": ""
+    "knex": "3.1.0",
+    "cors":"2.8.5"
+  }  
 }

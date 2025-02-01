@@ -1,11 +1,16 @@
 const express = require('express');
+const cors = require('cors');
+const knex = require('knex');
+
+
+const app = express();
+app.use(express.json());
+app.use(cors());
 
 const user = require('./route/user.js');
 const activities = require('./route/activities.js');
 const reservations = require('./route/reservations.js')
 
-const app = express();
-app.use(express.json());
 
 app.use('/user', user); 
 app.use('/activities', activities); 
